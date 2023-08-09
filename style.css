@@ -1,0 +1,166 @@
+/*
+The designs were created to the following widths:
+​
+- Mobile: 375px
+- Desktop: 1440px
+​
+## Colors
+​
+### Primary
+​
+- Pale blue: hsl(225, 100%, 94%)
+- Bright blue: hsl(245, 75%, 52%)
+​
+### Neutral
+​
+- Very pale blue: hsl(225, 100%, 98%)
+- Desaturated blue: hsl(224, 23%, 55%)
+- Dark blue: hsl(223, 47%, 23%)
+​
+## Typography
+​
+### Body Copy
+​
+- Font size (paragraph): 16px
+​
+### Font
+​
+- Family: [Red Hat Display](https://fonts.google.com/specimen/Red+Hat+Display)
+- Weights: 500, 700, 900
+*/
+:root {
+    font-size: 14px;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    font-family: "Red Hat Display", sans-serif;
+  }
+
+  body {
+    width: 1440px;
+    height: 100vh;
+    background-size: cover;
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-color: hsl(224, 23%, 55%);
+    text-align: center;
+  }
+
+  .container {
+    display: inline-block;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 600px;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 50px;
+  }
+
+  .hero-img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .card-body {
+    padding: 32px 48px;
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-body .content > p {
+    color: gray;
+  }
+
+  h1{
+    margin-bottom: 16px;
+    font-weight: 900;
+  }
+
+  p {
+    line-height: 1.8rem;
+  }
+
+  .annual-plan {
+    display: flex;
+    padding: 16px;
+    margin: 24px 0;
+    align-items: center;
+    justify-content: space-between;  
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 10px;
+  }
+
+  .annual-plan-main {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .annual-plan-main p:first-child {
+    font-weight: 900;
+  }
+
+  .annual-plan-main p:last-child {
+    color: gray;
+  }
+
+  .annual-plan a {
+    font-weight: 700;
+    color: hsl(223, 47%, 23%);
+  }
+
+  .annual-plan a:hover {
+    color: hsl(245, 75%, 52%);
+  }
+
+  button {
+    width: 100%;
+    display: block;
+    padding: 16px;
+    font-weight: 900;
+    border-radius: 16px;
+    cursor: pointer;
+  }
+
+  .payment {
+    color: white;
+    background-color: hsl(223, 47%, 23%);
+  }
+
+  .cancel {
+    color: hsl(224, 23%, 55%);
+    background-color: white;
+    border: none;
+  }
+
+  .payment:hover {
+    background-color: hsl(245, 75%, 52%);
+  }
+
+  .cancel:hover {
+    color: black;
+  }
+
+  @media screen and (max-width: 600px) {
+
+    body {
+      width: 375px;
+      height: 100vh;
+      background-size: cover;
+      background-image: url(./images/pattern-background-mobile.svg);
+      background-color: hsl(224, 23%, 55%);
+    }
+
+    .card-body {
+    padding: 24px 32px;  
+    }
+  }
